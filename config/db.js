@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const db = async () => {
+exports.db = async () => {
   try {
     mongoose.set("strictQuery", false);
     await mongoose.connect(process.env.Mongo_URL);
@@ -9,5 +9,3 @@ const db = async () => {
     console.log("DB connection error");
   }
 };
-module.exports = { db };
-
