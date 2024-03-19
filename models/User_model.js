@@ -7,21 +7,19 @@ const mongoose = require("mongoose");
             required: true,
         },
 
-        password: {
-            type: String,
-            required: true
-        },
+       
 
         mailAdress: {
             type: String,
             required : true
             
         },
-       
-        gender:{
-            type: String,
-            required: true
-        },
+
+       status: {
+        enum: ["active", "inactive"],
+        type: String,
+        required: true
+       },
 
         createdAt: {
             type: Date,
